@@ -64,4 +64,4 @@ define Package/clouddrive2/install
 endef
 
 $(eval $(call Download,clouddrive2))
-$(eval $(call BuildPackage,clouddrive2)
+$(eval $(call BuildPackage,clouddrive2))
