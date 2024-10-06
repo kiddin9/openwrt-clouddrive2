@@ -1,0 +1,20 @@
+<%+header%>
+<h2><%:CloudDrive2 Status%></h2>
+<fieldset class="cbi-section">
+    <legend><%:Running Status%></legend>
+    <div id="clouddrive2_status">
+        <em><%:Collecting data...%></em>
+    </div>
+</fieldset>
+
+<script type="text/javascript">//<![CDATA[
+    XHR.poll(5, '<%=url('admin/services/clouddrive2/status')%>', null,
+        function(x, data) {
+            var status = document.getElementById('clouddrive2_status');
+            if (data && status) {
+                status.innerHTML = data.running ? '<%:CloudDrive2 is running%>' : '<%:CloudDrive2 is not running%>';
+            }
+        }
+    );
+//]]></script>
+<%+footer%>
