@@ -26,7 +26,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/clouddrive2
   SECTION:=net
   CATEGORY:=Network
-  DEPENDS:=@(arm||aarch64||x86_64) +fuse-utils
+  DEPENDS:=@(arm||aarch64||x86_64) +fuse3-utils
   TITLE:=CloudDrive2
 endef
 
