@@ -1,7 +1,16 @@
+# SPDX-License-Identifier: GPL-2.0-only
+#
+# Copyright (C) 2024-2026 OpenWrt.org
+#
+
 include $(TOPDIR)/rules.mk
 
+PKG_NAME:=luci-app-clouddrive2
+PKG_VERSION:=2.0.0
+PKG_RELEASE:=1
+
 LUCI_TITLE:=LuCI support for CloudDrive2
-LUCI_DEPENDS:=+clouddrive2
+LUCI_DEPENDS:=+luci-base +clouddrive2
 LUCI_PKGARCH:=all
 
 include $(TOPDIR)/feeds/luci/luci.mk
